@@ -9,5 +9,10 @@ const takeName = () => {
     console.log('Hello,', name);
 }
 
-export { displayWelcome, takeName };
+const app = () => {
+    displayWelcome();
+    takeName();
+}
+
+export { app };
 

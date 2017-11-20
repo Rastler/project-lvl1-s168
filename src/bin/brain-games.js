@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { displayWelcome, takeName } from '..';
+import { app } from '..';
 
-displayWelcome();
-takeName();
+app();
