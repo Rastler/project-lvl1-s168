@@ -1,5 +1,5 @@
 {
-  "name": "hexlet-project01",
+  "name": "hexlet-project01-by-rastler",
   "version": "0.2.1",
   "description": "",
   "main": "dist/bin/brain-games.js",
@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
