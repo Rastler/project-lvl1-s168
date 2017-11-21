@@ -18,27 +18,26 @@ const getRandomInt = (a, b) => {
 
 const even = n => !(n % 2);
 
-const evenApp = (rounds = 3) => {
+const evenApp = (rounds = 3, minRand = 1, maxRand = 25) => {
   showWelcome();
   const name = takeName();
   const iter = (attempts) => {
     if (attempts < 1) {
-      return true;
+      console.log('Congratulations, ', name);
+      return;
     }
-    const num = getRandomInt(1, 25);
+    const num = getRandomInt(minRand, maxRand);
     const response = readlineSync.question(
       'Question: $<defaultInput>: ',
       { defaultInput: num },
     );
-    if ((even(num) && response === 'yes') || (!even(num) && response === 'no')) {
+    if ((even(num) && response === 'yes') || (even(num) && response === 'no')) {
       console.log('Correct!');
     } else {
       console.log('"', response, '" is wrong answer ;(. Correct answer was "', response === 'yes' ? 'no' : 'yes', '". Let\'s try again,', name);
-      return false;
+      return;
     }
-    if (iter(attempts - 1)) {
-      console.log('Congratulations, ', name);
-    }
+    iter(attempts - 1);
   };
   iter(rounds);
 };
