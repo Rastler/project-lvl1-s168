@@ -31,7 +31,7 @@ const evenApp = (rounds = 3, minRand = 1, maxRand = 25) => {
       'Question: $<defaultInput>: ',
       { defaultInput: num },
     );
-    if ((even(num) && response === 'yes') || (even(num) && response === 'no')) {
+    if ((even(num) && response === 'yes') || (!even(num) && response === 'no')) {
       console.log('Correct!');
     } else {
       console.log('"', response, '" is wrong answer ;(. Correct answer was "', response === 'yes' ? 'no' : 'yes', '". Let\'s try again,', name);
