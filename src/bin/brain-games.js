@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { app } from '..';
+import app from '..';
 
 app();
