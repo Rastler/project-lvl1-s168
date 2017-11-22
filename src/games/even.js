@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { takeName, displayWelcome, even, getRandomInt } from '..';
+import { displayWelcome, even, getRandomInt } from '..';
 
 const evenGame = (name, rounds = 3, minRand = 1, maxRand = 25) => {
   displayWelcome();
