@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project01-by-rastler",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "",
   "main": "dist/bin/brain-games.js",
   "scripts": {
@@ -11,8 +11,7 @@
     "eslint": "eslint"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "author": "Roman Averin",
   "license": "ISC",
@@ -27,6 +26,7 @@
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.5",
     "readline-sync": "^1.4.7"
   }
 }
