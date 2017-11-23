@@ -6,11 +6,6 @@ const takeName = () => {
   return name;
 };
 
-// const chooseGame = () => {
-//   const index = readlineSync.keyInSelect(games, 'Please choose the game: ');
-//   return gamesFunc[index];
-// };
-
 const getRandomInt = (a, b) => {
   const min = Math.ceil(a);
   const max = Math.floor(b);
