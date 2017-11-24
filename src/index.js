@@ -12,11 +12,14 @@ const getRandomInt = (a, b) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-const core = (game, rounds = 3, rules = 'Game without rules :)') => {
+const core = (game, rules = '') => {
   let errFlag = false;
   console.log('Welcome to the Brain Games!\n');
   console.log(rules);
   const name = takeName();
+  if (rules === '') {
+    return;
+  }
   const round = (attempts) => {
     if (errFlag) {
       return;
@@ -26,17 +29,16 @@ const core = (game, rounds = 3, rules = 'Game without rules :)') => {
       return;
     }
     const answer = game(name);
-    const response = readlineSync.question(answer.question);
+    const response = readlineSync.question(`Question: ${answer.conditions}\n> `);
     if (answer.correct === response) {
       console.log('Correct!');
     } else {
-      const errMessage = `«${response}» is wrong answer ;(. Correct answer was «${answer.correct}». Let's try again, ${name}`;
-      console.log(errMessage);
+      console.log(`«${response}» is wrong answer ;(. Correct answer was «${answer.correct}». Let's try again, ${name}`);
       errFlag = true;
     }
     round(attempts - 1);
   };
-  round(rounds);
+  round(3);
 };
 
 export { core, getRandomInt };

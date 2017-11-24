@@ -1,9 +1,8 @@
 import { core, getRandomInt } from '..';
 
-const MINRAND = 1;
-const MAXRAND = 5;
-const ROUNDS = 3;
-const RULES = 'Find the greatest common divisor of given numbers.';
+const minRand = 1;
+const maxRand = 5;
+const rules = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   if (b === 0) {
@@ -13,13 +12,13 @@ const gcd = (a, b) => {
 };
 
 const game = () => {
-  const a = getRandomInt(MINRAND, MAXRAND);
-  const b = getRandomInt(MINRAND, MAXRAND);
+  const a = getRandomInt(minRand, maxRand);
+  const b = getRandomInt(minRand, maxRand);
   const correct = String(gcd(a, b));
-  const question = `Question: ${a} ${b} \n> `;
-  return { correct, question };
+  const conditions = `${a} ${b}`;
+  return { correct, conditions };
 };
 
 export default () => {
-  core(game, ROUNDS, RULES);
+  core(game, rules);
 };
