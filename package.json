@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project01-by-rastler",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "description": "",
   "main": "dist/bin/brain-games.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "author": "Roman Averin",
   "license": "ISC",
