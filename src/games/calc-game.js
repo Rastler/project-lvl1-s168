@@ -9,16 +9,15 @@ const sum = pair => car(pair) + cdr(pair);
 const sub = pair => car(pair) - cdr(pair);
 const mult = pair => car(pair) * cdr(pair);
 const operatons = [cons(sum, '+'), cons(sub, '-'), cons(mult, '*')];
-let index = 0;
 
 const game = () => {
   const a = getRandomInt(minRand, maxRand);
   const b = getRandomInt(minRand, maxRand);
+  const operationPair = operatons[getRandomInt(0, 2)];
   const numbers = cons(a, b);
-  const fn = car(operatons[index]);
+  const fn = car(operationPair);
   const correct = String(fn(numbers));
-  const conditions = `${a} ${cdr(operatons[index])} ${b}`;
-  index += 1;
+  const conditions = `${a} ${cdr(operationPair)} ${b}`;
   return { correct, conditions };
 };
 
