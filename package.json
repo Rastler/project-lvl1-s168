@@ -14,6 +14,7 @@
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
+    "brain-balance": "dist/bin/brain-balance.js",
     "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "author": "Roman Averin",
