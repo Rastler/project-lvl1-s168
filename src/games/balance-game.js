@@ -20,13 +20,13 @@ const balance = (arr) => {
   return balance(newArr);
 };
 
-const game = () => {
+const gameGenerator = () => {
   const num = String(getRandomInt(minRand, maxRand));
   const correct = balance([...num].map(el => Number(el)));
-  const conditions = `${num}`;
-  return { correct, conditions };
+  const question = `${num}`;
+  return { correct, question };
 };
 
 export default () => {
-  core(game, rules);
+  core(gameGenerator, rules);
 };

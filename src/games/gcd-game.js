@@ -11,14 +11,14 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const game = () => {
+const gameGenerator = () => {
   const a = getRandomInt(minRand, maxRand);
   const b = getRandomInt(minRand, maxRand);
   const correct = String(gcd(a, b));
-  const conditions = `${a} ${b}`;
-  return { correct, conditions };
+  const question = `${a} ${b}`;
+  return { correct, question };
 };
 
 export default () => {
-  core(game, rules);
+  core(gameGenerator, rules);
 };

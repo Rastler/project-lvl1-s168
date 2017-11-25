@@ -1,8 +1,8 @@
 import { core } from '..';
 
-const game = () => {
+const gameGenerator = () => {
 };
 
 export default () => {
-  core(game);
+  core(gameGenerator);
 };

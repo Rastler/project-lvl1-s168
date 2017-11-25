@@ -6,13 +6,13 @@ const rules = 'Answer "yes" if number even otherwise answer "no".';
 
 const even = n => !(n % 2);
 
-const game = () => {
+const gameGenerator = () => {
   const num = getRandomInt(minRand, maxRand);
   const correct = even(num) ? 'yes' : 'no';
-  const conditions = `${num}`;
-  return { correct, conditions };
+  const question = `${num}`;
+  return { correct, question };
 };
 
 export default () => {
-  core(game, rules);
+  core(gameGenerator, rules);
 };

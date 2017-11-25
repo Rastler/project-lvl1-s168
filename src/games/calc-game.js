@@ -10,17 +10,17 @@ const sub = pair => car(pair) - cdr(pair);
 const mult = pair => car(pair) * cdr(pair);
 const operatons = [cons(sum, '+'), cons(sub, '-'), cons(mult, '*')];
 
-const game = () => {
+const gameGenerator = () => {
   const a = getRandomInt(minRand, maxRand);
   const b = getRandomInt(minRand, maxRand);
   const operationPair = operatons[getRandomInt(0, 2)];
   const numbers = cons(a, b);
   const fn = car(operationPair);
   const correct = String(fn(numbers));
-  const conditions = `${a} ${cdr(operationPair)} ${b}`;
-  return { correct, conditions };
+  const question = `${a} ${cdr(operationPair)} ${b}`;
+  return { correct, question };
 };
 
 export default () => {
-  core(game, rules);
+  core(gameGenerator, rules);
 };
