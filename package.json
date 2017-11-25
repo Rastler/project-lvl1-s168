@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project01-by-rastler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/bin/brain-games.js",
   "scripts": {

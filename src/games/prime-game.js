@@ -21,7 +21,10 @@ const isPrime = (number) => {
 
 const gameGenerator = () => {
   const number = getRandomInt(1, maxNumber);
-  return { correct: isPrime(number) ? 'yes' : 'no', question: `${number}` };
+  return {
+    correct: isPrime(number) ? 'yes' : 'no',
+    question: `${number}`,
+  };
 };
 
 export default () => {
