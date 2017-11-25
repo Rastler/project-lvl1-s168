@@ -12,7 +12,7 @@ const getRandomInt = (a, b) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-const core = (game, rules = '') => {
+const core = (gameGenerator, rules = '') => {
   let errFlag = false;
   console.log('Welcome to the Brain Games!\n');
   console.log(rules);
@@ -28,8 +28,8 @@ const core = (game, rules = '') => {
       console.log(`Congratulations, ${name}`);
       return;
     }
-    const answer = game(name);
-    const response = readlineSync.question(`Question: ${answer.conditions}\n> `);
+    const answer = gameGenerator(name);
+    const response = readlineSync.question(`Question: ${answer.question}\n> `);
     if (answer.correct === response) {
       console.log('Correct!');
     } else {
